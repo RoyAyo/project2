@@ -6,17 +6,15 @@ body,html{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	margin-top: 5px;
+	margin-top: 10px;
 }
 
 ::placeholder{
 	font-family: serif;
 	font-size:10pt;
-	
 }
 
 #container{
-	display: block;
 	height: 100%;
 }
 
@@ -50,11 +48,6 @@ body,html{
 	width: 100%;
 	height: 100%;
 }
-#searchdiv-inner{
-padding-top: 1%;	
-padding-left: 29%;
-
-}
 #search{
 	width: 59%;
 	height: 40px;
@@ -62,20 +55,27 @@ padding-left: 29%;
 	border-radius: 5px;
 	box-shadow: 2px 2px 9px #524d4d;
 }
-#sub{
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	font-family: serif;
-	margin-left: 72%;
-}
 #search-icon{
 	height: 15px;
 	width: 15px;
 	position: relative;
 	left: 30px;
 	top: 2.5px;
-	opacity:1;
+}
+
+#sub{
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+}
+
+#button{
+	background-color: black;
+	border: 0px;
+	height: 40px;
+	width: 40px;
+	border-radius: 5px;
+	color: #fff;
 }
 
 /*spinner*/
