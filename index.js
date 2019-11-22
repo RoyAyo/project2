@@ -23,14 +23,17 @@ async function getTimeZone(loc) {
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v11',
 		center: [lat, lng],
-		zoom: 6,
+		zoom: 5,
 	});
 
 	
 	getLocation(lat, lng).then(res => {
 		document.getElementById('loader').style.display = "none";
 		document.getElementById('time').innerHTML = res;
-	}).catch(error => window.alert("Location locked!"));
+	}).catch(error => {
+		document.getElementById('loader').style.display = "none";
+		window.alert("Location 	Cannot Be Presently Accessed!");
+	});
 }
 
 async function getLocation(lat,lng){

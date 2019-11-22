@@ -14,18 +14,16 @@
 <body>
 	<div id="searchdiv">
 		<center>
-			<img src="search.svg" id="search-icon">
-			<input type="search" name="search" id="search" placeholder="Location..."><input type="button" value="Search" id="sub">
+			<div id="searchdivs-inner">
+				<img src="search.svg" id="search-icon">
+				<input type="search" name="search" id="search" placeholder="Location..."><input type="button" value="Search" id="sub">
+			</div>
+			<div id="box">
+				<div id="time"></div>
+			</div>
 		</center>
-
 	</div>
-	<center>
-		<div id="box">
-			<div id="time"></div>
-		</div>
-	</center>		
 	<div id="container">
-
 		<div id="map"></div>
 	</div>
 	<div id="loader" style="display: none;"></div>
