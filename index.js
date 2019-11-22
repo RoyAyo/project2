@@ -11,8 +11,6 @@ document.getElementById('sub').onclick = () => {
 
 async function getTimeZone(loc) {
 	const r = await fetch(`https://api.opencagedata.com/geocode/v1/json?key=${gkey}&q=${loc}`);
-	console.log(r);
-
 	const res = await r.json();
 
 	lat = res.results[0].geometry.lat;
