@@ -23,7 +23,7 @@ async function getTimeZone(loc) {
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v11',
 		center: [lat, lng],
-		zoom: 5,
+		zoom: 6,
 	});
 
 	
