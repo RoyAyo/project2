@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title> Time Api </title>
 	<meta charset="utf-8">
-	<meta
-      name="viewport"
-      content="width=device-width, initial-scale=1,
+	<meta name="viewport" content="width=device-width, initial-scale=1,
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name=" theme-color" content="#000000" />
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css">
 </head>
+
 <body>
+	<div>
+	<img src="Group 18.svg" id="sub">
+	</div>
+	<div id="searchdiv">
+		<div id="searchdiv-inner">
+			<img src="search.svg" id="search-icon">
+			<input type="search" name="search" id="search" placeholder="Country...">
+
+			
+			<!-- <input type="button"
+				value="Search" id="sub"> -->
+		</div>
+
+	</div>
+		
 	<div id="container">
 		<div id="box">
 			<center>
-				<div id="searchdiv">
-					<img src="instagram.svg" id="search-icon">
-					<input type="search" name="search" id="search" placeholder="Put in your Address.."><input type="button" value="Search" id="sub">
-				</div>
 				<div id="time"></div>
 			</center>
 		</div>
@@ -27,5 +38,15 @@
 	</div>
 	<div id="loader" style="display: none;"></div>
 	<script type="text/javascript" src="index.js"></script>
+	<script>
+		mapboxgl.accessToken = 'pk.eyJ1IjoiYXlvcm95IiwiYSI6ImNrMzk3bDNmMzBleWczaG5jYTMya2JrMDUifQ.Kqmo1lWYwAHdfb8koCzgTw';
+		var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [-74.50, 40],
+			zoom: 5,
+		});
+	</script>
 </body>
+
 </html>
