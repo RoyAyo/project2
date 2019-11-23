@@ -21,7 +21,7 @@ async function getTimeZone(loc) {
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v10',
-		center: [lat, lng],
+		center: [lng, lat],
 		zoom: 5,
 	});
 
