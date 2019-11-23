@@ -7,7 +7,10 @@ document.getElementById('sub').onclick = () => {
 
 	document.getElementById('loader').style.display = "block";
 
-	getTimeZone(loc);
+	getTimeZone(loc).catch(error => {
+		document.getElementById('loader').style.display = "none";
+		window.alert("incorrect location inputted");
+	});;
 }
 
 async function getTimeZone(loc) {
@@ -22,8 +25,8 @@ async function getTimeZone(loc) {
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v10',
 		center: [lng, lat],
-		zoom: 5,
-	});
+		zoom: 7,
+	})
 
 	
 	getLocation(loc).then(res => {
