@@ -34,13 +34,13 @@ async function getTimeZone(loc) {
 		document.getElementById('time').innerHTML = res;
 	}).catch(error => {
 		document.getElementById('loader').style.display = "none";
-		window.alert("Location cannot be accessed Presently");
+		window.alert("Location cannot be accessed");
 	});
 }
 
 async function getLocation(loc){
 	//const res = await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${key}&format=json&by=position&lat=${lat}&lng=${lng}`);
-	const res = await fetch(`http://api.worldweatheronline.com/premium/v1/tz.ashx?q=${loc}&format=json&key=${key}`);
+	const res = await fetch(`https://api.worldweatheronline.com/premium/v1/tz.ashx?q=${loc}&format=json&key=${key}`);
 
 	const result = await res.json();
 
