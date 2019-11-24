@@ -1,5 +1,5 @@
-//const key = "QDNBJNIZRYOQ";
-const key = "5e84417f343f4732adf220630192311";
+const key = "QDNBJNIZRYOQ";
+//const key = "5e84417f343f4732adf220630192311";
 const gkey = "0dbb0bd1e6ac4be09b4b2b65a221bcc8";
 
 document.getElementById('sub').onclick = () => {
@@ -39,10 +39,11 @@ async function getTimeZone(loc) {
 }
 
 async function getLocation(loc){
-	//const res = await fetch(`http://api.timezonedb.com/v2.1/get-time-zone?key=${key}&format=json&by=position&lat=${lat}&lng=${lng}`);
-	const res = await fetch(`https://api.worldweatheronline.com/premium/v1/tz.ashx?q=${loc}&format=json&key=${key}`);
+	const res = await fetch(`https://api.timezonedb.com/v2.1/get-time-zone?key=${key}&format=json&by=position&lat=${lat}&lng=${lng}`);
+	//const res = await fetch(`https://api.worldweatheronline.com/premium/v1/tz.ashx?q=${loc}&format=json&key=${key}`);
 
 	const result = await res.json();
 
-	return result.data.time_zone[0].localtime;
+	//return result.data.time_zone[0].localtime;
+	return result.formatted;
 	}
